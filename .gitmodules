@@ -1,0 +1,3 @@
+[submodule "openwilma.js"]
+	path = openwilma.js
+	url = https://github.com/openwilma/openwilma.js

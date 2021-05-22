@@ -1,0 +1,3 @@
+student@example.com
+Password1
+https://xxxxx.inschool.fi/!02xxxxxx

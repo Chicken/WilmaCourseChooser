@@ -1,0 +1,14 @@
+{
+  "name": "wilmacoursechooser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm ci && cd openwilma.js && npm ci && npm run build",
+    "start": "node ."
+  },
+  "author": "Antti <antti@antti.codes>",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
