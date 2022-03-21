@@ -1,8 +1,8 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
 const ow = require("./openwilma.js/dist/index.js");
-const courses = fs.readFileSync("courses.txt", "utf-8").trim().split("\n");
-const [ username, password, server ] = fs.readFileSync("creds.txt", "utf-8").trim().split("\n");
+const courses = fs.readFileSync("courses.txt", "utf-8").trim().split("\n").map(l => l.trim());
+const [ username, password, server ] = fs.readFileSync("creds.txt", "utf-8").trim().split("\n").map(l => l.trim());
 
 // Function to choose the courses
 async function choose(id, url, token, formkey) {
@@ -34,7 +34,7 @@ async function choose(id, url, token, formkey) {
         username,
         password,
         server
-    }, false);
+    }, false, true);
 
     console.log(`Choosing ${courses.length} courses...`);
     // Loop courses and try to choose them
